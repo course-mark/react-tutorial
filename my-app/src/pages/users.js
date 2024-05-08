@@ -24,15 +24,25 @@ const userData = [
   },
 ];
 
-const convertedArrayToJsx = userData.map((user) => {
-  return <UserCard name={user.name} email={user.email} phone={user.phone} />;
-});
-
 function users() {
   return (
     <div>
       <h1 className="text-4xl text-center font-bold">Users</h1>
-      <div className="grid grid-cols-3 gap-4 p-4">{convertedArrayToJsx}</div>
+      <div className="grid grid-cols-3 gap-4 p-4">
+        {userData.map((user) => {
+          return (
+            <UserCard
+              name={user.name}
+              email={user.email}
+              phone={user.phone}
+              // function as a prop
+              onSaveUserDetails={() => {
+                alert("data is being saved");
+              }}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

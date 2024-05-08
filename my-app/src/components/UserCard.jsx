@@ -16,6 +16,9 @@ function UserCard(props) {
           <p className="text-gray-700 text-base">Phone: {props.phone}</p>
         </div>
 
+        <button onClick={()=>{
+            props.onSaveUserDetails()
+        }}>Save Details</button>
         
       </div>
     </div>
