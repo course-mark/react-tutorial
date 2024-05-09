@@ -1,4 +1,5 @@
 import UserCard from "@/components/UserCard";
+import AddUser from "@/components/AddUser";
 import React, { useState } from "react";
 
 // const userData = [
@@ -81,8 +82,14 @@ function users() {
                 setUserData(newUserData)
               }}
             />
+
           );
         })}
+       <AddUser onAddUser={(newUserData) => {
+        setUserData((prevUserData)=>{
+          return [...prevUserData, newUserData]
+        })
+       }}/>
       </div>
     </div>
   );
