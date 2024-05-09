@@ -10,22 +10,24 @@ const [email, setemail] = useState("");
 const [phone, setphone] = useState("");
 
   return (
-    <form onSubmit={(e)=>{
+    <form  onSubmit={(e)=>{
       console.log(e);
     }}>
-      <input type="text" placeholder="Id" onChange={(e)=>{
+      <input  className="border  text-center text-2xl text-black" type="text" placeholder="Id" onChange={(e)=>{
         setid(e.target.value)
       }}/>
-      <input type="text" placeholder="User Name" onChange={(e)=>{
+      <input className="border  text-center text-2xl text-black" type="text" placeholder="User Name" onChange={(e)=>{
         setuser(e.target.value)
       }}/>
-      <input type="email" placeholder="Email" onChange={(e)=>{
+      <input className="border  text-center text-2xl text-black" type="email" placeholder="Email" onChange={(e)=>{
         setemail(e.target.value)
       }}/>
-      <input type="text" placeholder="Phone Number" onChange={(e)=>{
+      <input className="border  text-center text-2xl text-black" type="text" placeholder="Phone Number" onChange={(e)=>{
         setphone(e.target.value)
       }}/>
-      <button type="button" onClick={()=>{
+      <button className="border text-center text-2xl text-white" type="reset" onClick={()=>{
+      // on click reset the form just change the type of the button
+
         props.onAddUser({
           id: id,
           name: user,
