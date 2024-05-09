@@ -16,9 +16,17 @@ function UserCard(props) {
           <p className="text-gray-700 text-base">Phone: {props.phone}</p>
         </div>
 
+<div className="flex justify-between p-4">
+
         <button onClick={()=>{
-            props.onSaveUserDetails()
+          props.onSaveUserDetails()
         }}>Save Details</button>
+
+        {/* onDelete */}
+        <button onClick={()=>{
+          props.onDelete()
+        }}>Delete</button>
+        </div>
         
       </div>
     </div>
