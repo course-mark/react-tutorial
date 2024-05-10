@@ -1,58 +1,86 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from 'yup';
 
-function AddUserControlled(props) {
+const validationSchema = Yup.object().shape({
+  id: Yup.string().required("Id is required"),
+  name: Yup.string().required("Name is required"),
+  email: Yup.string().email("Invalid email").required("Email is required"),
+  phone: Yup.string().required("Phone is required")
+})
 
-const [id, setid] = useState("");
-const [user, setuser] = useState("");
-const [email, setemail] = useState("");
-const [phone, setphone] = useState("");
+
+function AddUserUncontrolled(props) {
+  const addUserForm = useFormik({
+    initialValues: {
+      id: "",
+      name: "",
+      email: "asdasd",
+      phone: "",
+    },
+    onSubmit: (values) => {
+      props.onAddUser(values);
+      addUserForm.resetForm();
+    },
+    validationSchema: validationSchema
+  });
+
+  console.log(addUserForm.values);
 
   return (
-    <div onSubmit={(e)=>{
-      console.log(e);
-    }} className="flex flex-col w-full mx-auto p-4 border-2 border-gray-200 rounded-lg shadow-lg">
-      <input className="text-black" type="text" placeholder="Id" value={id} onChange={(e)=>{
-        setid(e.target.value)
-      }}/>
-      <input className="text-black" type="text" placeholder="User Name" value={user} onChange={(e)=>{
-        setuser(e.target.value)
-      }}/>
-      <input className="text-black" type="email" placeholder="Email" value={email} onChange={(e)=>{
-        setemail(e.target.value)
-      }}/>
-      <input className="text-black" type="text" placeholder="Phone Number" value={phone} onChange={(e)=>{
-        setphone(e.target.value)
-      }}/>
-      <button type="button" onClick={()=>{
-        if(!id){
-          alert("Please enter id")
-          return
-        }
-        if(!user){
-          alert("Please enter user name")
-          return
-        }
-        if(!email){
-          alert("Please enter email")
-          return
-        }
-        if(!phone){
-          alert("Please enter phone number")
-          return
-        }
-        props.onAddUser({
-          id: id,
-          name: user,
-          email: email,
-          phone: phone
-        })
-        setid("")
-        setuser("")
-        setemail("")
-        setphone("")
-      }}>Add User</button>
-    </div>
-  )
+    <form
+      onSubmit={addUserForm.handleSubmit}
+      className="flex flex-col w-full mx-auto p-4 border-2 border-gray-200 rounded-lg shadow-lg"
+    >
+      <input
+        name="id"
+        className="text-black"
+        type="text"
+        placeholder="Id"
+        onChange={addUserForm.handleChange}
+        value={addUserForm.values.id}
+      />
+      {addUserForm.errors.id ? <div>{addUserForm.errors.id}</div> : null}
+      <input
+        name="name"
+        className="text-black"
+        type="text"
+        placeholder="User Name"
+        onChange={addUserForm.handleChange}
+        value={addUserForm.values.name}
+      />
+      {
+        addUserForm.errors.name ? <div>{addUserForm.errors.name}</div> : null
+      }
+      <input
+        name="email"
+        className="text-black"
+        type="email"
+        placeholder="Email"
+        onChange={addUserForm.handleChange}
+        value={addUserForm.values.email}
+      />
+      {
+        addUserForm.errors.email ? <div>{addUserForm.errors.email}</div> : null
+      }
+      <input
+        name="phone"
+        className="text-black"
+        type="text"
+        placeholder="Phone Number"
+        onChange={addUserForm.handleChange}
+        value={addUserForm.values.phone}
+      />
+      {
+        addUserForm.errors.phone ? <div>{addUserForm.errors.phone}</div> : null
+      }
+      <button
+        type="submit"
+      >
+        Add User
+      </button>
+    </form>
+  );
 }
 
-export default AddUserControlled
+export default AddUserUncontrolled;
