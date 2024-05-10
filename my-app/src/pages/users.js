@@ -1,5 +1,5 @@
 import UserCard from "@/components/UserCard";
-import AddUser from "@/components/AddUser";
+import AddUser from "@/components/AddUserControlled";
 import React, { useState } from "react";
 
 // const userData = [

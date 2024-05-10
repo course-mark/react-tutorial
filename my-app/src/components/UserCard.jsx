@@ -10,7 +10,7 @@ function UserCard(props) {
           alt=""
           className="w-[10%]"
         />
-        <div className="px-6 py-4">
+        <div className="px-6 py-4 gr">
           <div className="font-bold text-xl mb-2">User Name: {props.name}</div>
           <p className="text-gray-700 text-base">Email: {props.email}</p>
           <p className="text-gray-700 text-base">Phone: {props.phone}</p>
