@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 
@@ -9,8 +9,17 @@ const validationSchema = Yup.object().shape({
   phone: Yup.string().required("Phone is required")
 })
 
+/**
+ * React Component lifecycle
+ * 1. Mounting
+ * 2. Updating
+ * 3. Unmounting
+ */
 
 function AddUserUncontrolled(props) {
+
+
+
   const addUserForm = useFormik({
     initialValues: {
       id: "",

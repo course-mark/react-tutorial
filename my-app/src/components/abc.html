@@ -1,0 +1,1039 @@
+<!-- Please keep this css code to improve the font quality-->
+<style>
+    * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  </style>
+  
+  <!-- script to redirect page -->
+  
+  <script type="text/javascript">
+      const hostname = window.location.hostname;
+  const redirects = [
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/",
+        "toHostname": "solm.com",
+        "toPath": "/en/us"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/about",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/who-we-are"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/covid-response",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/pandemic-response"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/contact",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/contact"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/market-segments/diabetes-care",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/safety-insulin-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/standard-insulin-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/safety-lancets",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/standard-lancets-and-devices",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/standard-pen-needles",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/alcohol-swabs",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/market-segments/medication-delivery",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/allergy-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/safety-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/low-dead-space-syringes-for-vaccination",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/safety-syringe-and-safety-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/standard-syringe-and-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/blunt-fill-and-fitler-needles",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/infusion-devices",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/oral-and-irrigation-syringes",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/syringe-tip-caps",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/alcohol-swabs-c",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/market-segments/blood-collection-diagnostics",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/safety-spring-activated-safety-butterfly-needles",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/blood-collection-safety-tube-holder-set",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/multi-sample-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/safety-butterfly-needles",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/safety-lancets-3",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/standard-lancets-and-lancing-devices",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/blood-collection-accessories",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/market-segments/ppe-accessories",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/masks",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/respirators",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/isolation-gowns",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/surgical-gowns",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/lab-coats",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/gloves",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/headwear",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/footwear",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/diagnostics",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/personal-care",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/market-segments/veterinary-care-products",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/vet-hypodermic-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/vet-needle-syringe-combo",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/diabetes-care",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/vet-blood-collection-needles-holders-and-sets",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/standard-syringe-and-needle-3",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/iv-catheters",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/oral-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/market-segments/bulk-non-sterile-products",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/bulk-non-sterile-standard-syringe-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/bulk-non-sterile-safety-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/bulk-non-sterile-oral-syringes",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/bulk-non-sterile-anesthesia-needles",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/news",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/newsroom"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/culture",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/career-culture"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/jobs-search",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/search-jobs"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/news-events/events",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/newsroom"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/landing-page-for-new-products",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/news/independent-laboratory-distributors-association-conference-2024",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/newsroom"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/news/wholehealth-pharmacy-partners-conference-2024",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/newsroom"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/news/sol-millennium-responds-to-fdas-warning-letter-and-safety-communication",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/newsroom"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/trademarks",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/trademarks"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/terms-and-conditions",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/terms-and-conditions"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/privacy-policy",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/privacy-policy"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-insulin-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-guard-safety-insulin-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-standard-insulin-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-lancet",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-heel-blood-lancets",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-standard-lancet",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-standard-pen-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-guard-safety-pull-button-blood-collection-set",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/general-use-syringe-syringe-w-fixed-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-needle-with-syringe-combination",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-syringe-with-exchangeable-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-syringe-with-fixed-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-luer-lock-safety-syringe-without-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-guard-safety-tb-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-syringe-with-blunt-fill-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-blunt-fill-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-blunt-fill-needle-with-filter",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-syringe-with-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-syringe-without-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-syringe-convenience-trays",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-allergy-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-oral-syringe-o-ring-type",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-oral-syringe-gasket-type",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-syringe-tip-caps",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-winged-infusion-sets",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-iv-catheter-with-protector",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-hypodemrmic-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-saline-flush-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-lancing-device",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-blood-lancet",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-guard-r-safety-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-alcohol-swabs",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-winged-blood-collection-needle-with-luer-adapter",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-winged-blood-collection-needle-with-pre-attached-holder",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-multi-sample-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-multi-sample-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-blood-collection-tube-holder-set",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-blood-collection-holder",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-tube-holder-with-luer-lock-adapter",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-blood-culture-holder",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-blood-transfer-holder",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-tourniquet",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-lancet-a",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-tm-luer-adapter-20g",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-level-1-masks",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-level-2-masks",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-level-3-masks",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-childrens-masks",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-retail-masks",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/n95-respirators-flat-fold-shape",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/n95-respirators-cup-shaped",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-level-1-isolation-gowns",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-level-2-isolation-gowns",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-level-3-isolation-gowns",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-protective-isolation-gown",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-level-3-surgical-gowns",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-level-4-surgical-gowns",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-nitrile-exam-gloves",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-bouffant-caps",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-susrgeons-caps",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-surgeons-hoods",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-beard-covers",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-shoe-covers",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-boot-covers",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-lab-coats",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-coveralls",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-face-shields",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-alcohol-swabs-1",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-surface-wipes",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-thermometers",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-vet-iv-catheter",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-vet-standard-insulin-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-vet-syringe-and-needles",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/vet-blood-collection-needles-holders-sets",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-vet-r-hypodermic-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-vet-r-needles-syringe-combo",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/bulk-non-sterile-blunt-fill-and-filter-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/product-types/bulk-non-sterile-epidural-tuohy-needles-with-removable-wing",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/bulk-non-sterile-standard-syringe",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/bulk-non-sterile-hypodermic-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/bulk-non-sterile-sol-care-safety-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/bulk-non-sterile-blunt-fill-filter-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/bulk-non-sterile-oral-syringes",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/bulk-non-sterile-quincke-needles",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/news-events/news",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/newsroom"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/news/diabetes-simplified-conference",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/newsroom"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/news/sol-millennium-responds-to-fda-safety-communication-press-release",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/newsroom"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/news/sol-millennium-follow-up-response-to-fda-communication",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/newsroom"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-epidural-tuohy-needle-with-removable-wing",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-r-syringe-w-fixed-needle",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-guard-r-auto-disable-syringe-w-fixed-needle-v",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-needle-vaccination",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-needle-with-syringe-combination-vaccination",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-guard-safety-tb-syringe-vaccination",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-care-safety-syringe-with-fixed-needle-vaccination",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-hypodermic-needle-vaccination",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-syringe-with-needle-vaccination",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sol-m-syringe-without-needle-vaccination",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/l031-118ms",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/products/sars-cov-2-antigen-rapid-test-nasal-swab-point-of-care",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/products"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/research-and-development",
+        "toHostname": "solm.com",
+        "toPath": "/en/us"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/#market-segments",
+        "toHostname": "solm.com",
+        "toPath": "/en/us"
+    },
+    {
+        "fromHostname": "naca.sol-m.com",
+        "fromPath": "/news sol-millennium-responds-to-fdas-warning-letter-and-safety-communication",
+        "toHostname": "solm.com",
+        "toPath": "/en/us/newsroom"
+    }
+]
+// fromPath should be unique
+  const uniqueRedirects = redirects.filter((v, i, a) => a.findIndex(t => (t.fromPath === v.fromPath)) === i);
+  const redirect = redirects.find(redirect => redirect.fromHostname === window.location.hostname && redirect.fromPath === window.location.pathname);
+  if (redirect) {
+    window.location.href = `https://${redirect.toHostname}${redirect.toPath}`;
+  }
+  else {
+    window.location.href = `https://solm.com/en/us`;
+  }
+  </script>
+  
