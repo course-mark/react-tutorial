@@ -16,17 +16,14 @@ const validationSchema = Yup.object().shape({
  * 3. Unmounting
  */
 
-function AddUserUncontrolled(props) {
+function EditUserUncontrolled({ userData, onEditUser}) {
+
+    const initialValues = userData;
 
   const addUserForm = useFormik({
-    initialValues: {
-      id: "",
-      name: "",
-      email: "",
-      phone: "",
-    },
+    initialValues:initialValues,
     onSubmit: (values) => {
-      props.onAddUser(values);
+      onEditUser(values);
       addUserForm.resetForm();
     },
     validationSchema: validationSchema
@@ -84,10 +81,10 @@ function AddUserUncontrolled(props) {
       <button
         type="submit"
       >
-        Add User
+        Edit User
       </button>
     </form>
   );
 }
 
-export default AddUserUncontrolled;
+export default EditUserUncontrolled;

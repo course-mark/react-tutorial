@@ -5,13 +5,8 @@ import AddUserControlled from "@/components/AddUserControlled";
 import AddUserUncontrolled from "@/components/AddUserUncontrolled";
 
 function users() {
-  // const userDataState = useState()
-  // const userData = userDataState[0]
-  // const setUserData = userDataState[1]
 
-  const [userData, setUserData] = useState([
-    
-  ]);
+  const [userData, setUserData] = useState([]); //dynamic array, due to state. it can be edited, deleted, changed, added
 
   return (
     <div>
@@ -20,9 +15,7 @@ function users() {
         {userData.map((user) => {
           return (
             <UserCard
-              name={user.name}
-              email={user.email}
-              phone={user.phone}
+              userData={user}
               // function as a prop
               onSaveUserDetails={() => {
                 alert("data is being saved");
@@ -35,14 +28,18 @@ function users() {
                 });
                 setUserData(newUserData);
               }}
+              onChange={(editedUserData) => {
+                const newUserData = userData.map((user1) => {
+                  if (user1.id === editedUserData.id) {
+                    return editedUserData;
+                  }
+                  return user1;
+                });
+                setUserData(newUserData);
+              }}
             />
           );
         })}
-        {/* <AddUser onAddUser={(newUserData) => {
-        setUserData((prevUserData)=>{
-          return [...prevUserData, newUserData]
-        })
-       }}/> */}
         <AddUserUncontrolled
           onAddUser={(newUserData) => {
             setUserData((prevUserData) => {
