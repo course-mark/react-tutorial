@@ -8,8 +8,8 @@ const validationSchema = Yup.object().shape({
   // email: Yup.string().email("Invalid email").required("Email is required"),
   // valudation using regex
   // email: Yup.string().matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/),  
-  email: Yup.string().matches(/^[\w-\.]+@simbaquartz.com$/),  
-  phone: Yup.string().required("Phone is required"),
+  email: Yup.string().matches(/^[\w-\.]+@simbaquartz.com$/),
+  phone: Yup.string().required("Phone is required"), //+91 1343453232
 });
 
 /**
