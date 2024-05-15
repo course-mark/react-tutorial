@@ -1,13 +1,13 @@
 import React, { use, useEffect, useState } from "react";
 import { useFormik } from "formik";
-import * as Yup from 'yup';
+import * as Yup from "yup";
 
 const validationSchema = Yup.object().shape({
   id: Yup.string().required("Id is required"),
   name: Yup.string().required("Name is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
-  phone: Yup.string().required("Phone is required")
-})
+  phone: Yup.string().required("Phone is required"),
+});
 
 /**
  * React Component lifecycle
@@ -17,7 +17,6 @@ const validationSchema = Yup.object().shape({
  */
 
 function AddUserUncontrolled(props) {
-
   const addUserForm = useFormik({
     initialValues: {
       id: "",
@@ -29,7 +28,7 @@ function AddUserUncontrolled(props) {
       props.onAddUser(values);
       addUserForm.resetForm();
     },
-    validationSchema: validationSchema
+    validationSchema: validationSchema,
   });
 
   console.log(addUserForm.values);
@@ -56,9 +55,7 @@ function AddUserUncontrolled(props) {
         onChange={addUserForm.handleChange}
         value={addUserForm.values.name}
       />
-      {
-        addUserForm.errors.name ? <div>{addUserForm.errors.name}</div> : null
-      }
+      {addUserForm.errors.name ? <div>{addUserForm.errors.name}</div> : null}
       <input
         name="email"
         className="text-black"
@@ -67,9 +64,7 @@ function AddUserUncontrolled(props) {
         onChange={addUserForm.handleChange}
         value={addUserForm.values.email}
       />
-      {
-        addUserForm.errors.email ? <div>{addUserForm.errors.email}</div> : null
-      }
+      {addUserForm.errors.email ? <div>{addUserForm.errors.email}</div> : null}
       <input
         name="phone"
         className="text-black"
@@ -78,14 +73,15 @@ function AddUserUncontrolled(props) {
         onChange={addUserForm.handleChange}
         value={addUserForm.values.phone}
       />
-      {
-        addUserForm.errors.phone ? <div>{addUserForm.errors.phone}</div> : null
-      }
-      <button
-        type="submit"
-      >
-        Add User
-      </button>
+      {addUserForm.errors.phone ? <div>{addUserForm.errors.phone}</div> : null}
+      {/* conditional rendering */}
+      {false ? (
+        <button type="submit">Add User</button>
+      ) : (
+        <button type="submit" className="bg-blue-500 text-white p-2 rounded-lg">
+          Add User
+        </button>
+      )}
     </form>
   );
 }
