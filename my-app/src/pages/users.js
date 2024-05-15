@@ -15,6 +15,9 @@ function users() {
         {userData.map((user) => {
           return (
             <UserCard
+            // very important to define key for each element in a list in react
+            // each key should be unique
+              key={user.id}
               userData={user}
               // function as a prop
               onSaveUserDetails={() => {
