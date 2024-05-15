@@ -5,7 +5,10 @@ import * as Yup from "yup";
 const validationSchema = Yup.object().shape({
   id: Yup.string().required("Id is required"),
   name: Yup.string().required("Name is required"),
-  email: Yup.string().email("Invalid email").required("Email is required"),
+  // email: Yup.string().email("Invalid email").required("Email is required"),
+  // valudation using regex
+  // email: Yup.string().matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/),  
+  email: Yup.string().matches(/^[\w-\.]+@simbaquartz.com$/),  
   phone: Yup.string().required("Phone is required"),
 });
 
