@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -7,9 +7,9 @@ const validationSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
   // email: Yup.string().email("Invalid email").required("Email is required"),
   // valudation using regex
-  // email: Yup.string().matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/),  
-  email: Yup.string().matches(/^[\w-\.]+@simbaquartz.com$/,{
-    message:"Invalid Email"
+  // email: Yup.string().matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/),
+  email: Yup.string().matches(/^[\w-\.]+@simbaquartz.com$/, {
+    message: "Invalid Email",
   }),
   phone: Yup.string().required("Phone is required"), //+91 1343453232
 });
@@ -22,6 +22,9 @@ const validationSchema = Yup.object().shape({
  */
 
 function AddUserUncontrolled(props) {
+  const alertButtonRef = useRef();
+  const idInputRef = useRef();
+
   const addUserForm = useFormik({
     initialValues: {
       id: "",
@@ -44,6 +47,7 @@ function AddUserUncontrolled(props) {
       className="flex flex-col w-full mx-auto p-4 border-2 border-gray-200 rounded-lg shadow-lg"
     >
       <input
+        ref={idInputRef}
         name="id"
         className="text-black"
         type="text"
@@ -80,13 +84,33 @@ function AddUserUncontrolled(props) {
       />
       {addUserForm.errors.phone ? <div>{addUserForm.errors.phone}</div> : null}
       {/* conditional rendering */}
-      {false ? (
+      {true ? (
         <button type="submit">Add User</button>
       ) : (
         <button type="submit" className="bg-blue-500 text-white p-2 rounded-lg">
           Add User
         </button>
       )}
+      <button
+        type="button"
+        className="hidden"
+        ref={alertButtonRef}
+        onClick={() => {
+          // alert(idInputRef.current.value);
+          idInputRef.current.focus();
+        }}
+      >
+        alert
+      </button>
+
+      <button
+        type="button"
+        onClick={() => {
+          alertButtonRef.current.click();
+        }}
+      >
+        click here
+      </button>
     </form>
   );
 }

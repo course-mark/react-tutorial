@@ -25,7 +25,7 @@ const [phone, setPhone] = useState("")
       }}/>
       <button type="button" onClick={()=>{
         if(!id){
-          alert("Please enter id")
+          alert("hjhjhPlease enter id")
           return
         }
         if(!user){
