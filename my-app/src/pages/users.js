@@ -15,6 +15,9 @@ const [userData, setUserData] = useAtom(userDataAtom); // same as above
       <div>
         <h1 className="text-4xl text-center font-bold">Users</h1>
         <div className="grid grid-cols-3 gap-4 p-4">
+
+          {/* number of users added */}
+          
           {userData.map((user) => {
             return (
               <UserCard
