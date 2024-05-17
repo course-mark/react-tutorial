@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import HomePage from './pages';
 import About from './pages/about';
+import User from './pages/users/user';
 import ContactUs from './pages/about/contact-us';
 
 const BrowserRouter = createBrowserRouter([
@@ -23,6 +24,11 @@ const BrowserRouter = createBrowserRouter([
     path: '/about/contact-us',
     element: <ContactUs />,
   },
+  // dynamic path
+  {
+    path: '/users/:userId',
+    element: <User/>,
+  }
 
 ]);
 
