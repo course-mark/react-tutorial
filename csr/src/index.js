@@ -10,8 +10,9 @@ import HomePage from './pages';
 import About from './pages/about';
 import User from './pages/users/user';
 import ContactUs from './pages/about/contact-us';
+import Products from './pages/products';
 
-const BrowserRouter = createBrowserRouter([
+const routes = [
   {
     path: '/',
     element: <HomePage />,
@@ -26,11 +27,16 @@ const BrowserRouter = createBrowserRouter([
   },
   // dynamic path
   {
-    path: '/users/:userId',
+    path: '/users/:id',
     element: <User/>,
+  },
+  {
+    path: '/products',
+    element: <Products/>
   }
+]
 
-]);
+const BrowserRouter = createBrowserRouter(routes);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

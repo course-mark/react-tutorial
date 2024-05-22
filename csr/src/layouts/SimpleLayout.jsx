@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 export const SimpleLayout = ({children}) => {
   return (
     <div>
-    {/* sidebar */}
-    
       <header>
         <h1>Simple Layout</h1>
       </header>
@@ -25,6 +23,9 @@ export const SimpleLayout = ({children}) => {
             </li>
             <li>
                 <Link to="/about/contact-us">Contact Us</Link>
+            </li>
+            <li>
+                <Link to="/products">Products</Link>
             </li>
             </ul>
         </nav>
