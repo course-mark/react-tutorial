@@ -29,7 +29,11 @@ export const SimpleLayout = ({children}) => {
             </li>
             </ul>
         </nav>
+        <div style={{
+          padding: '20px',
+        }}>
         {children}
+        </div>
         </div>
       </main>
       <footer>
