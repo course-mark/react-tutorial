@@ -8,8 +8,7 @@ function ContactUs() {
   const [message, setMessage] = useState( localStorage.getItem('message') || '')
 
   // useMemo
-
-  const 
+  
 
   return (
     <SimpleLayout>
