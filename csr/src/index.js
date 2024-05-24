@@ -33,7 +33,7 @@ const routes = [
   {
     path: '/products',
     element: <Products/>
-  }
+  },
 ]
 
 const BrowserRouter = createBrowserRouter(routes);
