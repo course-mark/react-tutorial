@@ -4,12 +4,15 @@ import useProducts from "../../hooks/products";
 // react-query
 
 function Products() {
-    const [, searchedProducts, keyword, setKeyword] = useProducts()
+  const [, searchedProducts, keyword, setKeyword, isLoading] = useProducts();
 
   return (
     <SimpleLayout>
       <h2>Products</h2>
       {/* keyword */}
+        {isLoading && <p style={{
+            fontSize: '200px',
+        }}>Loading...</p>}
       <div>
         <input
           type="text"

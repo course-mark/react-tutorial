@@ -5,11 +5,14 @@ function useProducts() {
     const [products, setProducts] = useState([]);
     const [searchedProducts, setSearchedProducts] = useState([]);
     const [keyword, setKeyword] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
+        setIsLoading(true)
         getProducts().then((data) => {
-          setProducts(data);
-          setSearchedProducts(data);
+            setProducts(data);
+            setSearchedProducts(data);
+            setIsLoading(false)
         });
         return () => {};
       }, []);
@@ -26,7 +29,7 @@ function useProducts() {
         };
       }, [keyword, products]);
 
-      return [products, searchedProducts, keyword, setKeyword]
+      return [products, searchedProducts, keyword, setKeyword, isLoading]
 }
 
 export default useProducts
