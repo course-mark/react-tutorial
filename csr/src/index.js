@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -6,11 +6,18 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import HomePage from './pages';
-import About from './pages/about';
-import User from './pages/users/user';
-import ContactUs from './pages/about/contact-us';
-import Products from './pages/products';
+// import HomePage from './pages';
+// import About from './pages/about';
+// import User from './pages/users/user';
+// import ContactUs from './pages/about/contact-us';
+// import Products from './pages/products';
+
+// lazy loading
+const HomePage = React.lazy(() => import('./pages'));
+const About = React.lazy(() => import('./pages/about'));
+const User = React.lazy(() => import('./pages/users/user'));
+const ContactUs = React.lazy(() => import('./pages/about/contact-us'));
+const Products = React.lazy(() => import('./pages/products'));
 
 const routes = [
   {
@@ -41,7 +48,9 @@ const BrowserRouter = createBrowserRouter(routes);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>  
+    <Suspense fallback={<div>Component is Loading...</div>}>
     <RouterProvider router={BrowserRouter}/>
+    </Suspense>
   </React.StrictMode>
 );
 
